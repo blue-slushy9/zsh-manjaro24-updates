@@ -1,0 +1,18 @@
+# Open crontab file for editing with default editor
+crontab -e
+
+# Example: run shell script every Saturday at midnight, the script is located
+# at this filepath; format for time and date: MM HH * * Day, e.g. Sunday = 0;
+# DON'T FORGET TO MAKE THE SHELL SCRIPT EXECUTABLE WITH CHMOD!
+0 0 * * 6 /home/Me/Scripts/run_every_saturday.sh
+
+# Verify cron job has been created by listing all cron jobs
+crontab -l
+
+# View journal entries for cron
+journalctl -u cron
+
+# Verify whether the cron daemon is running, will also show any related errors
+systemctl status cronie
+
+# 
