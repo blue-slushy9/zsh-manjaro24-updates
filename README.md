@@ -1,0 +1,1 @@
+# zsh-manjaro24-updates
