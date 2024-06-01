@@ -10,9 +10,10 @@ crontab -e
 crontab -l
 
 # View journal entries for cron
-journalctl -u cron
+journalctl -u cronie
 
 # Verify whether the cron daemon is running, will also show any related errors
 systemctl status cronie
 
-# 
+# Reload cron daemon
+sudo systemctl reload cronie
