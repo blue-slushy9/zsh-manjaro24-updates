@@ -1,10 +1,22 @@
+# SAMPLE CRONTAB
+
+# Define filepath to script you want to run with cron---DON'T FORGET TO MAKE IT EXECUTABLE!
+SCRIPT_PATH=/home/Me/Scripts/run_every_saturday.sh
+
+# Define filepath to our cron log for debugging
+CRON_LOG=/home/Me/cron/cron_log.txt
+
+# Define interval at which cron job should run, in this case at midnight every Saturday;
+# Format for time and date: Minute, Hour, Day of Month, Month, Day of week, e.g. Sunday = 0;
+# Redirect standard error (file descriptor 2) and standard output (file descriptor 1) to cron log
+0 0 * * 6 $SCRIPT_PATH >> $CRON_LOG 2>&1
+
+# /SAMPLE CRONTAB
+
+# CRON AND RELATED COMMANDS
+
 # Open crontab file for editing with default editor
 crontab -e
-
-# Example: run shell script every Saturday at midnight, the script is located
-# at this filepath; format for time and date: MM HH * * Day, e.g. Sunday = 0;
-# DON'T FORGET TO MAKE THE SHELL SCRIPT EXECUTABLE WITH CHMOD!
-0 0 * * 6 /home/Me/Scripts/run_every_saturday.sh
 
 # Verify cron job has been created by listing all cron jobs
 crontab -l
