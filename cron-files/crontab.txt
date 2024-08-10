@@ -3,10 +3,10 @@
 SHELL=/usr/bin/zsh
 
 # Define filepath to zsh script
-SCRIPT_PATH=/home/slushy/GitHub/Shell/zsh/zsh-manjaro24-updates/zsh_manjaro24_updates.zsh
+SCRIPT_PATH=/home/slushy/GitHub/Shell/zsh/zsh-manjaro24-updates/manjaro24_updates.zsh
 
 # Define filepath to cron log, for storing standard output and standard errors
-CRON_OUTPUT=/home/slushy/cron/cron_output.txt
+CRON_OUTPUT=/home/slushy/GitHub/Shell/zsh/zsh-manjaro24-updates/cron-files/cron_output.txt
 
 # Format for the numbers or stars: Minute, Hour, Day of month, Month, Weekday;
 # This is configured to run at midnight every Saturday (1 means Monday); 
