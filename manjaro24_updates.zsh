@@ -1,17 +1,10 @@
-# Define shell to be used for all cron jobs in this file, it is recommended
-# to use the same path as that found in the SHELL environment variable
-SHELL=/usr/bin/zsh
+#!/usr/bin/zsh
 
-# Define filepath to zsh script
-SCRIPT_PATH=/home/slushy/GitHub/Shell/zsh/zsh-manjaro24-updates/zsh_manjaro24_updates.zsh
+# pacman updates
+pacman -Syu
 
-# Define filepath to cron log, for storing standard output and standard errors
-CRON_OUTPUT=/home/slushy/cron/cron_output.txt
+# snap updates
+snap refresh
 
-# Format for the numbers or stars: Minute, Hour, Day of month, Month, Weekday;
-# This is configured to run at midnight every Saturday (1 means Monday); 
-# 7/29/24 - added the redirect to capture standard output and standard errors
-# since the cron job has not actually run thus far; '2>&1' means capture
-# standard errors (file descriptor 2) as well as standard output (file
-# descriptor 1)
-0 0 * * 6 $SCRIPT_PATH >> CRON_OUTPUT 2>&1
+# yay updates
+yay -Syu
