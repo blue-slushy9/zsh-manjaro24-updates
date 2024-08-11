@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-# This is the manual version of the script, NOT the cron version
+# This is the cron version of the script, NOT the version that is run manually
 
 # pacman updates
 echo -e "Initializing pacman updates...\n"
