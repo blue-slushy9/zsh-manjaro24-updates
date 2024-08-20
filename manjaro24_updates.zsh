@@ -18,5 +18,6 @@ echo
 
 # yay updates
 echo -e "Initiating yay updates...\n"
-yay -Syu
+# 8/19/24: Added '--noconfirm' switch to bypass prompts
+yay -Syu --noconfirm
 echo -e "\nyay updates complete.\n"
